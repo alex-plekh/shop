@@ -1,0 +1,126 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Roboto,sans-serif; }
+  * li {
+    list-style-type: none; }
+  * .box-centre {
+    width: 1400px;
+    margin: 0 auto; }
+  * .header {
+    position: relative;
+    display: block;
+    padding: 21px 0 20px 0;
+    background: #FFFFFF; }
+    * .header .header_logo img {
+      height: 39px;
+      width: 106px; }
+    * .header .header_logo {
+      display: flex;
+      justify-content: center; }
+    * .header img {
+      height: 16px;
+      width: 23px; }
+    * .header .header_item {
+      align-items: center;
+      display: flex;
+      position: absolute;
+      right: 0;
+      top: 32px; }
+    * .header .square {
+      align-items: center;
+      text-align: center;
+      height: 20px;
+      width: 20px;
+      background: #000000; }
+    * .header .num_style {
+      font-family: Roboto,sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      color: #FFFFFF;
+      margin-left: 8px; }
+  * .nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 300px; }
+  * .check_mark {
+    position: absolute;
+    top: 222px;
+    right: 80px; }
+  * .line_style {
+    font-family: Roboto,sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    color: #000000; }
+  * .nav_list {
+    font-family: Roboto,sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #000000;
+    margin-bottom: 30px; }
+  * a {
+    color: #000 !important;
+    text-decoration: none; }
+  * .nav_list__line_style {
+    margin-bottom: 30px; }
+  * .content_wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px; }
+    * .content_wrapper .main {
+      display: grid;
+      grid-template-columns: 292px 292px 292px;
+      grid-template-rows: 389px 389px 389px;
+      grid-gap: 147px 68px; }
+    * .content_wrapper .item_style {
+      font-family: Roboto,sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 12px;
+      color: #A3A3A3;
+      margin: 15px 0 2px 20px; }
+    * .content_wrapper .other {
+      margin-top: 59px; }
+    * .content_wrapper .about_product {
+      font-family: Roboto,sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 19px;
+      color: #000000;
+      margin-left: 20px; }
+    * .content_wrapper .price {
+      font-family: Roboto,sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 23px;
+      letter-spacing: 1px;
+      color: #000000;
+      text-align: center;
+      margin-top: 15px;
+      margin-bottom: 1px; }
+    * .content_wrapper .number {
+      font-family: Roboto,sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 10px;
+      line-height: 12px;
+      color: #A3A3A3;
+      text-align: center; }
+    * .content_wrapper .card_list img {
+      height: 100%;
+      width: 100%; }
+    * .content_wrapper .card_list {
+      background-color: #F2F2F2; }
+
+/*# sourceMappingURL=style.css.map */
