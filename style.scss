@@ -16,18 +16,6 @@
     color: #FFFFFF;
   }
 
-  .header {
-    &_line_wrapper {
-      .aside_style {
-        @include purchases_font_style;
-      }
-
-      //font-family: Roboto,sans-serif;
-      //font-style: normal;
-      //font-weight: 300;
-      //font-size: 12px;
-    }
-  }
 .box-centre{
   width:1400px ;
   margin: 0 auto;
@@ -58,6 +46,15 @@
   .header_item_wrapper{
     position: relative;
   }
+
+  .aside_style {
+        @include purchases_font_style;
+      //font-family: Roboto,sans-serif;
+      //font-style: normal;
+      //font-weight: 300;
+      //font-size: 12px;
+    }
+
 
   .header_item{
     align-items: center;
@@ -98,13 +95,13 @@
     width: 84px;
   }
 
-  .first_purchase{
+  .header_first_purchase{
     display: flex;
     border-top: 1px solid #424242;
     border-bottom: 1px solid #424242;
   }
 
-  .second_purchase{
+  .header_second_purchase{
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #424242;
@@ -121,13 +118,20 @@
     position: fixed;
     z-index: 10;
     top: 0;
-    text-align: center;
     padding-top: 143px;
     height: 850px;
     width: 340px;
     background: #2B2B2B;
     //right: -400px;
     transition: right 2s linear;
+  }
+
+  .header_btn_wrapper{
+    margin-top: 297px;
+    height: 62px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .close_icon_wrapper img{
@@ -138,7 +142,7 @@
     right: 37px;
   }
 
-  .par_wrapper{
+  .purchases_par_wrapper{
     display: flex;
     justify-content: space-between;
   }
@@ -146,7 +150,7 @@
 .line_wrapper{
   margin: 46px 31px 0 0;
 }
-  a.btn{
+  a.header_btn_buy{
     display: inline-block;
     color: #FFFFFF;
     font-weight: 700;
@@ -157,14 +161,11 @@
     border: 2px solid white;
     border-radius: 1px;
     transition: 0.2s;
-    a.btn:hover {
+    a.header_btn_buy:hover {
       background: rgba(255,255,255,.2);
       color: #FFFFFF;
     }
 
-    a.btn{
-      margin-top: 297px;
-    }
   }
 
 }
@@ -262,7 +263,7 @@
       left: -5px;
     }
 
-    .image img{
+    .wrapper_img img{
       width: 280px;
       margin: 0 auto;
       transition: 1s;

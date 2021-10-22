@@ -5,13 +5,6 @@
   font-family: Roboto,sans-serif; }
   * li {
     list-style-type: none; }
-  * .header_line_wrapper .aside_style {
-    font-family: Roboto,sans-serif;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 12px;
-    line-height: 14px;
-    color: #FFFFFF; }
   * .box-centre {
     width: 1400px;
     margin: 0 auto; }
@@ -31,6 +24,13 @@
       width: 23px; }
     * .header .header_item_wrapper {
       position: relative; }
+    * .header .aside_style {
+      font-family: Roboto,sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 14px;
+      color: #FFFFFF; }
     * .header .header_item {
       align-items: center;
       display: flex;
@@ -59,11 +59,11 @@
       margin: 19px 17px 19px 39px;
       height: 84px;
       width: 84px; }
-    * .header .first_purchase {
+    * .header .header_first_purchase {
       display: flex;
       border-top: 1px solid #424242;
       border-bottom: 1px solid #424242; }
-    * .header .second_purchase {
+    * .header .header_second_purchase {
       display: flex;
       justify-content: space-between;
       border-bottom: 1px solid #424242; }
@@ -76,24 +76,29 @@
       position: fixed;
       z-index: 10;
       top: 0;
-      text-align: center;
       padding-top: 143px;
       height: 850px;
       width: 340px;
       background: #2B2B2B;
       transition: right 2s linear; }
+    * .header .header_btn_wrapper {
+      margin-top: 297px;
+      height: 62px;
+      width: 100%;
+      display: flex;
+      justify-content: center; }
     * .header .close_icon_wrapper img {
       width: 20px;
       height: 20px;
       position: absolute;
       top: 45px;
       right: 37px; }
-    * .header .par_wrapper {
+    * .header .purchases_par_wrapper {
       display: flex;
       justify-content: space-between; }
     * .header .line_wrapper {
       margin: 46px 31px 0 0; }
-    * .header a.btn {
+    * .header a.header_btn_buy {
       display: inline-block;
       color: #FFFFFF;
       font-weight: 700;
@@ -104,11 +109,9 @@
       border: 2px solid white;
       border-radius: 1px;
       transition: 0.2s; }
-      * .header a.btn a.btn:hover {
+      * .header a.header_btn_buy a.header_btn_buy:hover {
         background: rgba(255, 255, 255, 0.2);
         color: #FFFFFF; }
-      * .header a.btn a.btn {
-        margin-top: 297px; }
   * .nav {
     position: relative;
     display: flex;
@@ -178,7 +181,7 @@
       box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
       top: -5px;
       left: -5px; }
-    * .content_wrapper .image img {
+    * .content_wrapper .wrapper_img img {
       width: 280px;
       margin: 0 auto;
       transition: 1s; }
