@@ -16,6 +16,44 @@
     color: #FFFFFF;
   }
 
+  @mixin purchases_line_style{
+    font-family: Roboto,sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+  }
+
+  @mixin nav_list_style{
+  font-family: Roboto,sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color:  #000000;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+  @mixin purchases_price_style{
+    font-family: Roboto,sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+  }
+
+  @mixin nav_list_transition{
+    transition: 0.5s linear;
+  }
+
+  @mixin card_list_transition{
+    transition: 2s;
+  }
+
 .box-centre{
   width:1400px ;
   margin: 0 auto;
@@ -46,15 +84,6 @@
   .header_item_wrapper{
     position: relative;
   }
-
-  .aside_style {
-        @include purchases_font_style;
-      //font-family: Roboto,sans-serif;
-      //font-style: normal;
-      //font-weight: 300;
-      //font-size: 12px;
-    }
-
 
   .header_item{
     align-items: center;
@@ -95,25 +124,6 @@
     width: 84px;
   }
 
-  .header_first_purchase{
-    display: flex;
-    border-top: 1px solid #424242;
-    border-bottom: 1px solid #424242;
-  }
-
-  .header_second_purchase{
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #424242;
-    }
-
-  .total{
-    display: flex;
-    justify-content: space-between;
-    padding: 40px 30px 0 40px;
-    margin-bottom: 297px;
-  }
-
   .purchases{
     position: fixed;
     z-index: 10;
@@ -122,9 +132,65 @@
     height: 850px;
     width: 340px;
     background: #2B2B2B;
-    //right: -400px;
+    right: -400px;
     transition: right 2s linear;
+
+    .header_first_purchase{
+      display: flex;
+      border-top: 1px solid #424242;
+      border-bottom: 1px solid #424242;
+    }
+
+    .header_second_purchase{
+      display: flex;
+      border-bottom: 1px solid #424242;
+    }
+
+    .purchases_par_wrapper{
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .purchases_icon_minus{
+      position: absolute;
+      left: 0;
+      top: 7px;
+    }
+
+    .purchases_icon_plus{
+      position: absolute;
+      left: 32px;
+      top: 4px;
+    }
+
+    .aside_style {
+      @include purchases_font_style;
+    }
+
+    .header_price{
+      margin-right: 31px;
+    }
+
+    .header_number{
+      @include purchases_line_style;
+      margin-left: 14px;
+    }
+
+    .header_price{
+      @include purchases_line_style
+    }
+
+    .purchases_price_total{
+      @include purchases_price_style;
+      display: flex;
+      justify-content: space-between;
+      padding: 40px 30px 0 40px;
+      margin-bottom: 297px;
+    }
   }
+
+
 
   .header_btn_wrapper{
     margin-top: 297px;
@@ -142,13 +208,14 @@
     right: 37px;
   }
 
-  .purchases_par_wrapper{
-    display: flex;
-    justify-content: space-between;
-  }
-
 .line_wrapper{
-  margin: 46px 31px 0 0;
+ display: grid;
+  grid-template-columns: 200px;
+  grid-template-rows: 30px 30px;
+  grid-template-areas:
+          "header_line"
+          "header_number" "header_price";
+  margin-top: 46px;
 }
   a.header_btn_buy{
     display: inline-block;
@@ -192,19 +259,17 @@
     color: #000000;
   }
   .nav_list {
-    font-family: Roboto,sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 14px;
-    color:  #000000;
-    margin-bottom: 30px;
-    margin-top: 30px;
+    @include nav_list_style;
   }
 
   a {
+    @include nav_list_transition;
     color: #000;
-    text-decoration: none
+    text-decoration: none;
+  }
+
+  a:hover{
+    color: #00ace6;
   }
 
   .content_wrapper{
@@ -222,7 +287,7 @@
       .main .slider img{
         height: 40px;
         width: 40px;
-        margin: 0 2.5px 0 2.5px;
+        margin: 0 5px 0 5px;
       }
 
     .slider{
@@ -248,8 +313,8 @@
     }
 
     .card_list:hover .slider{
+      @include card_list_transition;
       opacity: 1;
-      transition: 2s;
     }
 
     .card_list:hover {

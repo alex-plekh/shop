@@ -24,13 +24,6 @@
       width: 23px; }
     * .header .header_item_wrapper {
       position: relative; }
-    * .header .aside_style {
-      font-family: Roboto,sans-serif;
-      font-style: normal;
-      font-weight: 300;
-      font-size: 12px;
-      line-height: 14px;
-      color: #FFFFFF; }
     * .header .header_item {
       align-items: center;
       display: flex;
@@ -59,19 +52,6 @@
       margin: 19px 17px 19px 39px;
       height: 84px;
       width: 84px; }
-    * .header .header_first_purchase {
-      display: flex;
-      border-top: 1px solid #424242;
-      border-bottom: 1px solid #424242; }
-    * .header .header_second_purchase {
-      display: flex;
-      justify-content: space-between;
-      border-bottom: 1px solid #424242; }
-    * .header .total {
-      display: flex;
-      justify-content: space-between;
-      padding: 40px 30px 0 40px;
-      margin-bottom: 297px; }
     * .header .purchases {
       position: fixed;
       z-index: 10;
@@ -80,7 +60,64 @@
       height: 850px;
       width: 340px;
       background: #2B2B2B;
+      right: -400px;
       transition: right 2s linear; }
+      * .header .purchases .header_first_purchase {
+        display: flex;
+        border-top: 1px solid #424242;
+        border-bottom: 1px solid #424242; }
+      * .header .purchases .header_second_purchase {
+        display: flex;
+        border-bottom: 1px solid #424242; }
+      * .header .purchases .purchases_par_wrapper {
+        position: relative;
+        display: flex;
+        justify-content: space-between; }
+      * .header .purchases .purchases_icon_minus {
+        position: absolute;
+        left: 0;
+        top: 7px; }
+      * .header .purchases .purchases_icon_plus {
+        position: absolute;
+        left: 32px;
+        top: 4px; }
+      * .header .purchases .aside_style {
+        font-family: Roboto,sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 14px;
+        color: #FFFFFF; }
+      * .header .purchases .header_price {
+        margin-right: 31px; }
+      * .header .purchases .header_number {
+        font-family: Roboto,sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 1px;
+        color: #FFFFFF;
+        margin-left: 14px; }
+      * .header .purchases .header_price {
+        font-family: Roboto,sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 1px;
+        color: #FFFFFF; }
+      * .header .purchases .purchases_price_total {
+        font-family: Roboto,sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 30px 0 40px;
+        margin-bottom: 297px; }
     * .header .header_btn_wrapper {
       margin-top: 297px;
       height: 62px;
@@ -93,11 +130,12 @@
       position: absolute;
       top: 45px;
       right: 37px; }
-    * .header .purchases_par_wrapper {
-      display: flex;
-      justify-content: space-between; }
     * .header .line_wrapper {
-      margin: 46px 31px 0 0; }
+      display: grid;
+      grid-template-columns: 200px;
+      grid-template-rows: 30px 30px;
+      grid-template-areas: "header_line" "header_number" "header_price";
+      margin-top: 46px; }
     * .header a.header_btn_buy {
       display: inline-block;
       color: #FFFFFF;
@@ -138,8 +176,11 @@
     margin-bottom: 30px;
     margin-top: 30px; }
   * a {
+    transition: 0.5s linear;
     color: #000;
     text-decoration: none; }
+  * a:hover {
+    color: #00ace6; }
   * .content_wrapper {
     display: flex;
     justify-content: space-between;
@@ -152,7 +193,7 @@
     * .content_wrapper .main .slider img {
       height: 40px;
       width: 40px;
-      margin: 0 2.5px 0 2.5px; }
+      margin: 0 5px 0 5px; }
     * .content_wrapper .slider {
       padding: 13px 30px;
       position: absolute;
@@ -170,8 +211,8 @@
     * .content_wrapper .card_list .slider {
       opacity: 0; }
     * .content_wrapper .card_list:hover .slider {
-      opacity: 1;
-      transition: 2s; }
+      transition: 2s;
+      opacity: 1; }
     * .content_wrapper .card_list:hover {
       z-index: 100;
       padding: 5px;
